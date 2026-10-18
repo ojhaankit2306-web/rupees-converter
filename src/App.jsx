@@ -10,7 +10,7 @@ function App() {
   const [convertedAmount,setconvertedAmount] = useState(0)
 
   const currencyInfo = useCurrencyinfo(from)
-  const options = object.keys(currencyInfo)
+  const options = Object.keys(currencyInfo)
   const swaap = () =>{
     setfrom(to)
     setto(from)
@@ -63,7 +63,7 @@ function App() {
                             label="To"
                             amount={convertedAmount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setTo(currency)}
+                            onCurrencyChange={(currency) => setto(currency)}
                             selectCurrency={to}
                             amountDisable
                         />
